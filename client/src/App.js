@@ -30,6 +30,17 @@ function App() {
           <Header />
           <div className="container">
               <Routes>
+
+                <Route path="/profile">
+                <Route path=":username" element={<Profile />} />
+                <Route path="" element={<Profile />} />
+                </Route>
+
+                <Route
+                path="/thought/:id"
+                element={<SingleThought />}
+                />
+
                 <Route
                   path="/"
                   element={<Home />}
